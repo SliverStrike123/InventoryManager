@@ -8,14 +8,24 @@ function rndIDGenerator(){
     var ID = "ID".concat(num)
     return ID
 }
-export function insertstonks(){
-    var data = JSON.parse(fs.readFileSync('stock.json'))
+
+export function addinvoice(){
     const invoiceID = prompt("Invoice ID: ")
+    const itemcode = prompt("Item Code: ")
+    const itemname = prompt("Item Name: ")
+    const amount = prompt("Amount: ")
+    const cost = prompt("Price per unit: ")
+
+    
+}
+export function addinventory(){
+    var data = JSON.parse(fs.readFileSync('inventory.json'))
+    
     const stockname = prompt("Name: ")
     const amount = prompt("Amount: ")
-    const cost = prompt("Cost per stock: ")
+    const cost = prompt("Cost per unit: ")
 
-    const stock = {
+    const invoice = {
         "name": stockname,
         "amount": parseInt(amount),
         "cost": parseInt(cost)
